@@ -6,9 +6,10 @@ python:
   - 3.9.1
 
 env:
-  - SECRET_KEY='SOME_SCRET_KEY'
-  - DEBUG=True
-  - ALLOWED_HOSTS='.localhost, 127.0.0.1, .herokuapp.com'
+  global:
+    - SECRET_KEY='SOME_SCRET_KEY'
+    - DEBUG=True
+    - ALLOWED_HOSTS='.localhost, 127.0.0.1, .herokuapp.com'
 
 
 install:

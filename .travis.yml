@@ -4,12 +4,18 @@ sudo: true
 
 python:
   - 3.9.1
+env:
+  global:
+    - PIPENV_VENV_IN_PROJECT=1
+    - PIPENV_IGNORE_VIRTUALENVS=1
 
 install:
-  - pip install -r requirements.txt
+  - pip3 install pipenv
+  - pipenv sync -d
 
 scripts:
-  - pytest
+  - pipenv run flake8 .
+  - pipenv run pytest
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)

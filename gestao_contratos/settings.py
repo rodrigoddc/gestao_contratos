@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # project apps
-    'core',
+    'gestao_contratos.core',
 ]
 
 MIDDLEWARE = [

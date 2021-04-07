@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<body class="d-flex h-100 text-center text-white bg-dark">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+    {% include 'core/navbar.html' only %}
+
+
+    <main class="px-3">
+        <h1>Representante de equipe.</h1>
+        <p class="lead">Este é o novo formulário para preenchimento com os dados dos seus atletas.
+            Com base nessas respostas serão formalizados os contratos.</p>
+        <p class="lead">
+            <a href="{% url 'core:formulario' %}" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Preencher formulário</a>
+        </p>
+    </main>
+
+    <footer class="mt-auto text-white-50">
+        <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+    </footer>
+</div>
+</body>
+{% endblock content %}

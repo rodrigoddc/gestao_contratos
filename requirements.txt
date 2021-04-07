@@ -4,3 +4,5 @@ dj-database-url==0.*
 python-decouple==3.*
 gunicorn
 whitenoise
+pytest
+pytest-django

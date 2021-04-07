@@ -5,4 +5,4 @@ def home(request):
 
 
 def atleta_cadastrar(request):
-	return render(request, 'core/formulario.html')
+	return render(request, 'core/form_athlete.html')

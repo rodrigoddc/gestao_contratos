@@ -1,6 +1,6 @@
-django
-psycopg2
-dj-database-url
-python-decouple
+django==3.*
+psycopg2-binary
+dj-database-url==0.*
+python-decouple==3.*
 gunicorn
 whitenoise

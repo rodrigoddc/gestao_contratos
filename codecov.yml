@@ -1,0 +1,4 @@
+ignore:
+  - manage.py
+  - awsgi.pi
+  - wsgi.py

@@ -16,6 +16,8 @@ django = "*"
 [dev-packages]
 flake8 = "*"
 pytest-django = "*"
+pytest-cov = "*"
+coverage = "*"
 
 [requires]
 python_version = "3.8"

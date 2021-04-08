@@ -2,9 +2,6 @@ language: python
 dist: focal
 sudo: true
 
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
-
 python:
   - 3.9.1
 env:
@@ -20,3 +17,5 @@ scripts:
   - pipenv run flake8 .
   - pipenv run pytest
 
+after_success:
+  - codecov

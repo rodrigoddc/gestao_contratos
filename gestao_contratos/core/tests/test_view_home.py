@@ -13,4 +13,8 @@ class HomeViewGet(TestCase):
         self.assertTemplateUsed(self.response, 'core/home.html')
 
     def test_link_login(self):
-        self.assertContains(self.response, 'href="/login/"')
+        self.assertContains(self.response, f'href="{resolve_url("core:login")}"')
+
+
+class HomeViewPost(TestCase):
+    pass

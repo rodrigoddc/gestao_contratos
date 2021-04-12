@@ -4,10 +4,13 @@ from django.test import TestCase
 
 class HomeViewGet(TestCase):
     def setUp(self) -> None:
-        self.response = self.client.get(resolve_url("core:home"))
+        self.response = self.client.get(resolve_url('core:home'))
 
-    def test_view_home_status(self):
+    def test_status(self):
         self.assertTrue(200, self.response.status_code)
 
-    def test_view_home_template_used(self):
-        self.assertTemplateUsed(self.response, "core/home.html")
+    def test_template_used(self):
+        self.assertTemplateUsed(self.response, 'core/home.html')
+
+    def test_link_login(self):
+        self.assertContains(self.response, 'href="/login/"')

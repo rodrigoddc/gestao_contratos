@@ -1,14 +1,9 @@
-/* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #333;
-  text-shadow: none; /* Prevent inheritance from body */
+  text-shadow: none;
 }
-
-/*
- * Header
- */
 
 .nav-masthead .nav-link {
   font-weight: 700;
@@ -21,8 +16,6 @@
 .nav-masthead .nav-link:focus {
   border-bottom-color: rgba(255, 255, 255, .25);
 }
-
-
 
 .nav-masthead .active {
   color: #fff;

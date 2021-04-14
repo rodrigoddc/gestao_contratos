@@ -3,8 +3,13 @@
         <div>
             <a href="{% url 'core:home' %}" class="text-light nav-link"><h3 class="float-md-start mb-0">Gestão de Contratos</h3></a>
             <nav class="nav nav-masthead justify-content-center float-md-end">
-                <a class="nav-link active" aria-current="page" href="#">Administrativo </a>
-                <a class="nav-link" href="{% url 'core:login' %}">Login </a>
+                {% if user.is_authenticated %}
+                    <p class="nav-link">Olá {{ user.username }}</p>
+                    <a class="nav-link" aria-current="page" href="#">Administrativo </a>
+                    <a class="nav-link" href="{% url 'core:logout' %}">Logout</a>
+                {% else %}
+                    <a class="nav-link" href="{% url 'core:login' %}">Login</a>
+                {% endif %}
             </nav>
         </div>
     </div>

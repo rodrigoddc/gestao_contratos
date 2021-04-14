@@ -14,7 +14,7 @@ install:
   - pipenv sync -d
 
 scripts:
-  - pipenv run flake8 .
+  - pipenv run flake8 gestao_contratos
   - pipenv run pytest --cov=gestao_contratos
 
 after_success:

@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # project apps
     "gestao_contratos.core",
+    "django_extensions",
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+
+# New to Django 3.2
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

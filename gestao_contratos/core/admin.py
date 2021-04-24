@@ -1,5 +1,17 @@
-from django.contrib.admin import AdminSite
+from django.contrib import admin
+from gestao_contratos.core.models import Athlete, Address
 
-AdminSite.site_header = 'Gestão de Contratos Atletas'
-AdminSite.site_title = 'Administração da Gestão de contratos'
-AdminSite.index_title = 'Administrativo'
+admin.AdminSite.site_header = 'Gestão de Contratos Atletas'
+admin.AdminSite.site_title = 'Administração da Gestão de contratos'
+admin.AdminSite.index_title = 'Administrativo'
+
+
+class AddressInline(admin.StackedInline):
+    model = Address
+    extra = 1
+
+
+@admin.register(Athlete)
+class AthleteModelAdmin(admin.ModelAdmin):
+    list_display = ['name', 'email', 'cpf', 'rg']
+    inlines = [AddressInline, ]

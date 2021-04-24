@@ -1,6 +1,8 @@
 from django.shortcuts import resolve_url
 from django.test import TestCase
 
+from gestao_contratos.core.forms import AthleteForm
+
 
 class HomeViewGet(TestCase):
     def setUp(self) -> None:
@@ -17,4 +19,9 @@ class HomeViewGet(TestCase):
 
 
 class HomeViewPost(TestCase):
-    pass
+    def setUp(self) -> None:
+        self.response = self.client.get(resolve_url('core:formulario'))
+        self.form = AthleteForm()
+
+    def test_status_ok(self):
+        self.assertTrue(200, self.response.status_code)
